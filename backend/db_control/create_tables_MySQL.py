@@ -1,5 +1,5 @@
-from db_control.mymodels import Base
-from db_control.connect import engine
+from db_control.mymodels_MySQL import Base
+from db_control.connect_MySQL import engine
 from sqlalchemy import inspect
 
 

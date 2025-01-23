@@ -1,0 +1,6 @@
+{
+  "/customers/create/page": "app/customers/create/page.js",
+  "/customers/create/confirm/page": "app/customers/create/confirm/page.js",
+  "/page": "app/page.js",
+  "/customers/page": "app/customers/page.js"
+}

@@ -8,11 +8,34 @@ export default function CreatePage() {
     const formRef = useRef();
     const router = useRouter();
 
+    // const handleSubmit = async (event) => {
+    //     event.preventDefault();
+    //     const formData = new FormData(formRef.current);
+    //     await createCustomer(formData);
+    //     router.push(`./create/confirm?customer_id=${formData.get("customer_id")}`);
+    // };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const formData = new FormData(formRef.current);
-        await createCustomer(formData);
-        router.push(`./create/confirm?customer_id=${formData.get("customer_id")}`);
+        try {
+            const formData = new FormData(formRef.current);
+            const customerId = formData.get("customer_id"); // 顧客IDを取得
+    
+            // 顧客IDが空欄の場合はエラーをスロー
+            if (!customerId || customerId.trim() === "") {
+                throw new Error("顧客IDが空欄です。入力してください。");
+            }
+    
+            // 顧客データ作成APIを呼び出し
+            await createCustomer(formData);
+    
+            // 確認ページに遷移
+            router.push(`./create/confirm?customer_id=${customerId}`);
+        } catch (error) {
+            // エラーが発生した場合の処理
+            console.error("Error creating customer:", error);
+            alert(error.message || "エラーが発生しました。再試行してください。");
+        }
     };
 
     return (

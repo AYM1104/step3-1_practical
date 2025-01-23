@@ -9,7 +9,8 @@ class Base(DeclarativeBase):
 
 class Customers(Base):
     __tablename__ = 'customers'
-    customer_id: Mapped[str] = mapped_column(primary_key=True)
+    # customer_id: Mapped[str] = mapped_column(primary_key=True)
+    customer_id: Mapped[str] = mapped_column(primary_key=True, nullable=False)
     customer_name: Mapped[str] = mapped_column()
     age: Mapped[int] = mapped_column()
     gender: Mapped[str] = mapped_column()
