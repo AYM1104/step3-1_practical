@@ -1,0 +1,17 @@
+{
+  "node": {
+    "7f0f85363f08ed575b542efe4a9185c18b32318757": {
+      "workers": {
+        "app/customers/create/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fayu%2FTech0%2FStep3%2FStep3-1%2Fpractical%2Fsample4%2Ffrontend%2Fsrc%2Fapp%2Fcustomers%2Fcreate%2FcreateCustomer.js%22%2C%5B%5B%227f0f85363f08ed575b542efe4a9185c18b32318757%22%2C%22default%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/customers/create/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "YPyr2XCdFNwT2r7AE24lVImnv2mabteYzjnaGQabWJk="
+}
